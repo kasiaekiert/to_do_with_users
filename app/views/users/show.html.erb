@@ -1,0 +1,12 @@
+<%= @params %>
+
+<%= @user.first_name %>
+<%= @user.last_name %>
+<%= @user.year %>
+<%= @user.age %>
+
+<ul> 
+  <% @user.tasks.each do |task| %>
+    <li><%= task.name %></li>
+  <% end %>
+</ul>
