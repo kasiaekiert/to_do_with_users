@@ -1,9 +1,11 @@
-Lista Userów: 
-<ul>
-  <%# @users = User.all %>
-  <% @users.each do |user| %>
-    <%= image_tag user.picture_url(:thumb) if user.picture.present? %>
-    <li><%= link_to(user.email, user_path(user)) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  Lista Userów: 
+  <ul>
+    <%# @users = User.all %>
+    <% @users.each do |user| %>
+      <%= image_tag user.picture_url(:thumb) if user.picture.present? %>
+      <li><%= link_to(user.email, user_path(user)) %></li>
+    <% end %>
+  </ul>
+</div>
 

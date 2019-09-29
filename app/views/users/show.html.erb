@@ -4,6 +4,8 @@
 <%= @user.last_name %>
 <%= @user.year %>
 <%= @user.age %>
+<%= image_tag @user.picture_url(:thumb) if @user.picture.present? %>
+
 
 <ul> 
   <% @user.tasks.each do |task| %>
