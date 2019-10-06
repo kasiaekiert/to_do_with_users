@@ -30,4 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      logout: 'Logout'
+  tasks: 
+    create: 
+      task_success: 'Task was successfully created.'

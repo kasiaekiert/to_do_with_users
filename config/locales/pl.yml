@@ -1,0 +1,10 @@
+pl:
+  layouts:
+    application:
+      logout: "Wyloguj"
+  tasks: 
+    create: 
+      task_success: 'Zadanie utworzono.'
+  date:     
+    formats:       
+      default: "%d-%m-%Y"

@@ -13,5 +13,10 @@
   <%= @task.description %>
 </p>
 
+<p>
+  <strong>Created at:</strong>
+  <%= I18n.l(@task.created_at.to_date) %>
+</p>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
