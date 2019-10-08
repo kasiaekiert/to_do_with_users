@@ -36,3 +36,11 @@ en:
   tasks: 
     create: 
       task_success: 'Task was successfully created.'
+
+  # activerecord:
+  #   models:
+  #     # task: 'Task'
+  #     #   attributes:
+  #         task:
+  #           name: 'Name'
+  #           description: 'Description'

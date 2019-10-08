@@ -8,3 +8,25 @@ pl:
   date:     
     formats:       
       default: "%d-%m-%Y"
+
+  # activerecord:
+  #   models:
+  #     task: 'Zadanie'
+  #       attributes:
+  #         task:
+  #           name: 'Nazwa'
+  #           description: 'Opis'
+
+  activerecord:
+    models:
+      task: "Zadanie"
+    attributes:
+      task:
+        name: 'Pole nazwa'
+        description: 'Opis'
+    errors:
+      models:
+        task:
+          attributes:
+            description:
+              blank: 'nie może być pusty'
