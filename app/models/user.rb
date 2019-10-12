@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :tasks
+  has_one :setting
   validates :year, numericality: { only_integer: true }, allow_blank: true
   mount_uploader :picture, PictureUploader
 
