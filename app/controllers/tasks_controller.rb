@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_task, only: [:show]
   before_action :set_users, only: [:new, :edit]
+  before_action :set_current_user_task, olny: [:edit, :update, :destroy]
 
   def index
     @tasks = Task.all
@@ -14,6 +15,9 @@ class TasksController < ApplicationController
   end
 
   def edit
+    unless @task
+      redirect_to :tasks, notice: t('.task_access_deny') 
+    end
   end
 
   def create
@@ -69,4 +73,9 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:name, :description)
     end
+
+    def set_current_user_task
+      @task = current_user.tasks.find_by(id: params[:id])
+    end 
+
 end

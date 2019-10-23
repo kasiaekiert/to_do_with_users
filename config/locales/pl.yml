@@ -30,3 +30,4 @@ pl:
           attributes:
             description:
               blank: 'nie może być pusty'
+              on_black_list: 'zawiera zakazane słowo. Zmień swój opis.'

@@ -17,8 +17,16 @@
         <td><%= task.user.full_name %></td>
         <td><%= task.description %></td>
         <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if task.user == current_user %>
+            <%= link_to 'Edit', edit_task_path(task) %>
+          <% end %>
+        </td>
+        <td>
+          <% if task.user == current_user %>
+            <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

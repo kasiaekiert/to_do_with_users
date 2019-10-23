@@ -44,3 +44,11 @@ en:
   #         task:
   #           name: 'Name'
   #           description: 'Description'
+
+  activerecord:
+    errors:
+      models:
+        task:
+          attributes:
+            description:
+              on_black_list: 'has a word which is on black list. Change your language'

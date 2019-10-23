@@ -2,6 +2,9 @@ class UserController < ApplicationController
 
   def edit
     @user = current_user
-  end 
+    unless @user.setting
+      Setting.create(locale: :pl, user: current_user)
+    end
+  end
 
 end
